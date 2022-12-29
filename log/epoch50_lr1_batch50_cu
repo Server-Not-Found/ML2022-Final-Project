@@ -1,0 +1,14 @@
+../result/lr1_batch5_conv_epoch20.csv
+(25, 128, 3, 3)
+Traceback (most recent call last):
+  File "/home/caijunhong/ml/multi-networks/minpy_cnn/trainscripts/train_epoch50_batch50_lr1e1.py", line 68, in <module>
+    loss, prediction = net.forward(img, label, is_train=True)   # 训练阶段
+  File "/home/caijunhong/ml/multi-networks/minpy_cnn/net/cnn_1.py", line 51, in forward
+    x = self.fc5.forward(x)
+  File "/home/caijunhong/ml/multi-networks/minpy_cnn/layers/fc.py", line 34, in forward
+    result = np.dot(self.x, self.weight.data)
+  File "/home/caijunhong/anaconda3/envs/y/lib/python3.9/site-packages/cupy/linalg/_product.py", line 65, in dot
+    return a.dot(b, out)
+  File "cupy/_core/core.pyx", line 1657, in cupy._core.core.ndarray.dot
+  File "cupy/_core/_routines_linalg.pyx", line 511, in cupy._core._routines_linalg.dot
+ValueError: Axis dimension mismatch
